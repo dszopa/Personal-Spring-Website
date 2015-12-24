@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/fragments/header :: header" th:with="title=${'Index Page'}">
+</head>
+<body>
+<div th:include="/fragments/pageHeader :: pageHeader"></div>
+<!-- Page Content goes here -->
+<div class="row">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Homepage!</h1>
+            <p>Short description/message</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div>
+</div>
+<div th:include="/fragments/pageFooter :: pageFooter"></div>
+</body>
+</html>

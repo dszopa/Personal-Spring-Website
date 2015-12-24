@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/fragments/header :: header" th:with="title=${'About Page'}">
+</head>
+<body>
+<div th:include="/fragments/pageHeader :: pageHeader"></div>
+<!-- Page Content goes here -->
+<div class="row">
+    <div class="col-md-4">
+        <h1> About Page :D</h1>
+    </div>
+</div>
+<div th:include="/fragments/pageFooter :: pageFooter"></div>
+</body>
+</html>
