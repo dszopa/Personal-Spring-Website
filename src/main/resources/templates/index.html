@@ -2,18 +2,24 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:include="/fragments/header :: header" th:with="title=${'Index Page'}">
 </head>
-<body>
-<div th:include="/fragments/pageHeader :: pageHeader"></div>
+<body id="homepageBody">
+<!--<div th:include="/fragments/pageHeader :: pageHeader"></div>-->
 <!-- Page Content goes here -->
-<div class="row">
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Homepage!</h1>
-            <p>Short description/message</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+<div class="container-fluid">
+    <div class="row voffset9">
+        <div class="jumbotron" style="background:rgba(0,0,0,0.7);">
+            <h1>Hi, I'm Danny Szopa!</h1>
+            <div class="container">
+                <p>I am a Sophomore Computer Science Major at Iowa State University. I currently work for
+                    the University's ITS department where I am creating Web Applications with the
+                    <a href="http://spring.io/">Spring Framework.</a> In my free time I often work on personal projects that you can find on my
+                    <a href="https://github.com/dszopa">Github</a> or <a href="https://bitbucket.org/dszopa/">Bitbucket.</a>
+                </p>
+            </div>
         </div>
     </div>
 </div>
-<div th:include="/fragments/pageFooter :: pageFooter"></div>
+<!--<div class="row voffset9"></div>-->
+<div th:include="/fragments/pageFooter :: homepageFooter"></div>
 </body>
 </html>
