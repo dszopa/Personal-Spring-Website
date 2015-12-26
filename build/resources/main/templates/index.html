@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:include="/fragments/header :: header" th:with="title=${'Index Page'}">
+<head th:include="fragments/header :: header" th:with="title=${'About | Daniel Szopa'}">
 </head>
-<body id="homepageBody">
-<!--<div th:include="/fragments/pageHeader :: pageHeader"></div>-->
 <!-- Page Content goes here -->
+<body id="homepageBody">
 <div class="container-fluid">
     <div class="row voffset9">
         <div class="jumbotron" style="background:rgba(0,0,0,0.7);">
-            <h1>Hi, I'm Danny Szopa!</h1>
+            <h1>Hi, I'm Daniel Szopa!</h1>
             <div class="container">
                 <p>I am a Sophomore Computer Science Major at Iowa State University. I currently work for
                     the University's ITS department where I am creating Web Applications with the
@@ -19,7 +18,6 @@
         </div>
     </div>
 </div>
-<!--<div class="row voffset9"></div>-->
-<div th:include="/fragments/pageFooter :: homepageFooter"></div>
+<div th:include="fragments/pageFooter :: homepageFooter"></div>
 </body>
 </html>
