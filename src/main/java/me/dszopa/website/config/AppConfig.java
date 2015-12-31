@@ -1,17 +1,20 @@
 package me.dszopa.website.config;
 
+import org.apache.tomcat.jdbc.pool.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 
 /**
- * Created by danny on 12/26/15.
+ * Created by danny on 12/29/15.
  */
 @Configuration
-public class ServiceConfig {
-// Example
+public class AppConfig {
+
 //    @Bean
 //    public MyService myService() {
 //        return new MyServiceImpl();
 //    }
 }
-

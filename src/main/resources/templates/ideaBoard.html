@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/header :: header" th:with="title=${'Idea Board'}">
+</head>
+<body>
+<div th:include="fragments/pageHeader :: pageHeader"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>Programming Ideas</h1>
+        </div>
+        <div class="col-xs-2">
+            <button type="button" class="btn-md btn-primary voffset4">Edit</button>
+        </div>
+    </div>
+    <div th:each="idea : ${ideas}" class="row voffset1">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-6">
+            <tr>
+                <li class="voffset3" th:text="${idea.idea}"></li>
+            </tr>
+        </div>
+        <div class="col-xs-1">
+            <button type="button" class="btn-md btn-danger toggleButton" style="visibility: visible" th:value="${idea.id}">Delete</button>
+        </div>
+    </div>
+    <div class="row voffset3">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <tr>
+                <li>
+                    <button type="button" class="btn-md btn-primary toggleButton" style="visibility: visible">Add</button>
+                </li>
+            </tr>
+        </div>
+    </div>
+</div>
+
+<div th:include="fragments/pageFooter :: stickyFooter"></div>
+</body>
+</html>
