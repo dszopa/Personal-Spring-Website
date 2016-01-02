@@ -11,7 +11,7 @@
             <h1>Programming Ideas</h1>
         </div>
         <div class="col-xs-2">
-            <button type="button" class="btn-md btn-primary voffset4">Edit</button>
+            <button id="editButton" type="button" class="btn-md btn-primary voffset4">Edit</button>
         </div>
     </div>
     <div th:each="idea : ${ideas}" class="row voffset1">
@@ -22,21 +22,47 @@
             </tr>
         </div>
         <div class="col-xs-1">
-            <button type="button" class="btn-md btn-danger toggleButton" style="visibility: visible" th:value="${idea.id}">Delete</button>
+            <form method="post" th:action="@{/idea_board/delete/} + ${idea.id}">
+                <button type="submit" class="btn-md btn-danger toggleButton">Delete</button>
+            </form>
         </div>
     </div>
     <div class="row voffset3">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
-            <tr>
-                <li>
-                    <button type="button" class="btn-md btn-primary toggleButton" style="visibility: visible">Add</button>
-                </li>
-            </tr>
+            <form class="toggleButton voffset2" th:action="@{/idea_board/add}" th:object="${addForm}" method="post">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Add</button>
+                            </span>
+                            <input type="text" class="form-control" th:field="*{idea}" placeholder="Idea..."/>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
+
 <div th:include="fragments/pageFooter :: stickyFooter"></div>
+<script>
+    //<![CDATA[
+    $(document).ready(function() {
+        //On page load.. hide all of the toggleButtons unless..?...
+        $(".toggleButton").each(function(index) {
+            $(this).toggle();
+        });
+
+        $("#editButton").click(function() {
+            $(".toggleButton").each(function(index) {
+                $(this).toggle();
+            });
+        });
+    });
+    //]]>
+</script>
 </body>
 </html>
