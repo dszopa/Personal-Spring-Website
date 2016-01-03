@@ -2,8 +2,7 @@ package me.dszopa.website.controller;
 
 import me.dszopa.website.controller.form.IdeaBoardAddForm;
 import me.dszopa.website.entity.ProgrammingIdea;
-import me.dszopa.website.repo.ProgrammingIdeaDao;
-import org.springframework.beans.factory.annotation.Autowired;
+import me.dszopa.website.service.interfaces.ProgrammingIdeaService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,16 +16,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class IdeaBoardController {
 
-    // TODO dszopa 12/30/15 - Implement when i get back to school, i don't remember the config for services
-//    @Autowired
-//    private ProgrammingIdeaService ideaService;
+    private ProgrammingIdeaService ideaService;
 
-    @Autowired
-    private ProgrammingIdeaDao ideaDao;
+    public IdeaBoardController(ProgrammingIdeaService ideaService) {
+        this.ideaService = ideaService;
+    }
 
     @RequestMapping(value = "/idea_board", method = RequestMethod.GET)
     public String view(Model model) {
-        model.addAttribute("ideas", ideaDao.findAll());
+        model.addAttribute("ideas", ideaService.getAllIdeas());
         model.addAttribute("addForm", new IdeaBoardAddForm());
         return "ideaBoard";
     }
@@ -35,14 +33,14 @@ public class IdeaBoardController {
     public String addIdea(@ModelAttribute("addForm") IdeaBoardAddForm addForm) {
         ProgrammingIdea idea = new ProgrammingIdea();
         idea.setIdea(addForm.getIdea());
-        ideaDao.save(idea);
+        ideaService.saveIdea(idea);
 
         return "redirect:/idea_board";
     }
 
     @RequestMapping(value = "/idea_board/delete/{ideaId}", method = RequestMethod.POST)
     public String deleteIdea(@PathVariable String ideaId) {
-        ideaDao.delete(Long.valueOf(ideaId));
+        ideaService.deleteIdea(Long.valueOf(ideaId));
         return "redirect:/idea_board";
     }
 }

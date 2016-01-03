@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="dszopa.me" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/AppConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/Application.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/ControllerConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/RepoConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/ServiceConfig.java</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/build/classes/main" />
     <output-test url="file://$MODULE_DIR$/build/classes/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
