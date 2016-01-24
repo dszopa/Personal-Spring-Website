@@ -112,5 +112,6 @@
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-core:4.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.webjars:bootstrap:3.3.6" level="project" />
     <orderEntry type="library" name="Gradle: org.webjars:jquery:2.0.3-1" level="project" />
+    <orderEntry type="library" name="Gradle: org.webjars.bower:fontawesome:4.5.0" level="project" />
   </component>
 </module>

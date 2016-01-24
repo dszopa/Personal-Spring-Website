@@ -28,13 +28,21 @@ repositories {
 
 
 dependencies {
+    // Default Compile
     compile('org.springframework.boot:spring-boot-devtools')
     compile("org.springframework.boot:spring-boot-starter-security")
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('mysql:mysql-connector-java:5.1.31')
-    compile('org.webjars:jquery:2.0.3-1')
+
+    // Webjars
+    compile('org.webjars:jquery:3.0.0-alpha1')
     compile('org.webjars:bootstrap:3.3.6')
+    compile('org.webjars:bootswatch-darkly:3.3.5+4')
+    compile('org.webjars:font-awesome:4.5.0')
+    compile('org.webjars:react:0.14.3')
+
+    // Test Compile
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

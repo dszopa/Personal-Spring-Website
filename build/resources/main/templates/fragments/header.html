@@ -5,17 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title th:text="${title}"></title>
-        <!--<title>Title</title>-->
-
-        <!-- Bootstrap -->
-        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
-        <link th:href="@{/css/myStyle.css}" rel="stylesheet"/>
-
-        <!-- Font Awesome -->
-        <link th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css}" rel="stylesheet"/>
 
         <!-- Favicon -->
         <link rel='shortcut icon' type='image/x-icon' th:href="@{/img/favicon.ico}" />
+
+        <!-- Bootswatch Darkly -->
+        <link rel="stylesheet" th:href="@{/webjars/bootswatch-darkly/3.3.5+4/css/bootstrap.min.css}"/>
+
+        <!-- My Stylesheet -->
+        <link th:href="@{/css/myStyle.css}" rel="stylesheet"/>
+
+        <!-- Font Awesome -->
+        <link type="text/css" rel="stylesheet" th:href="@{/webjars/font-awesome/4.5.0/css/font-awesome.min.css}"/>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
