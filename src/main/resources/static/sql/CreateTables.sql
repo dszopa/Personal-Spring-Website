@@ -1,0 +1,2 @@
+CREATE TABLE programming_ideas (id bigint(20) NOT NULL AUTO_INCREMENT, idea varchar(255) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE pokemon_teams (id bigint(20) NOT NULL AUTO_INCREMENT,team_name varchar(255) NOT NULL DEFAULT 'no name',team_data varchar(30000) NOT NULL DEFAULT 'no team data', PRIMARY KEY (id));

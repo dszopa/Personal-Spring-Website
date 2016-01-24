@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by danny on 12/26/15.
  */
 @Controller
+@RequestMapping("/projects")
 public class SplitCalculatorController {
 
     @RequestMapping(value = "/split_calculator", method = RequestMethod.GET)

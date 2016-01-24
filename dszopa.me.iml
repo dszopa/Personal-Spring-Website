@@ -10,6 +10,13 @@
           <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/RepoConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/ServiceConfig.java</file>
         </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/ControllerConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/MvcConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/RepoConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/ServiceConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/me/dszopa/website/config/WebSecurityConfig.java</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
@@ -103,5 +110,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-config:4.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-web:4.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-core:4.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.webjars:bootstrap:3.3.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.webjars:jquery:2.0.3-1" level="project" />
   </component>
 </module>

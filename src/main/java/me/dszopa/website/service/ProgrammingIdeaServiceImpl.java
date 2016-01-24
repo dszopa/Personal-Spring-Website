@@ -16,7 +16,7 @@ public class ProgrammingIdeaServiceImpl implements ProgrammingIdeaService {
 
     private ProgrammingIdeaRepo ideaRepo;
 
-    public ProgrammingIdeaServiceImpl (ProgrammingIdeaRepo ideaRepo) {
+    public ProgrammingIdeaServiceImpl(ProgrammingIdeaRepo ideaRepo) {
         this.ideaRepo = ideaRepo;
     }
 

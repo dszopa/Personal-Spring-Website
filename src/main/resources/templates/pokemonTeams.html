@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/header :: header" th:with="title=${'Pokemon Teams'}">
+</head>
+<body>
+<div th:include="fragments/pageHeader :: pageHeader"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>Pokemon Teams</h1>
+        </div>
+        <div class="col-xs-2">
+            <button id="editButton" type="button" class="btn btn-md btn-primary voffset4">Edit</button>
+        </div>
+    </div>
+    <div th:each="team : ${teams}" class="row voffset1">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-6">
+            <div class="well">
+                <h3 class="well-md team voffset3" th:text="${team.teamName}"></h3>
+                <hr style="display: none"/>
+                <div class="well-sm preserveWhitespace" th:text="${team.teamData}" style="display: none"></div>
+            </div>
+        </div>
+        <div class="col-xs-1">
+            <form method="post" th:action="@{/projects/pokemon_teams/delete/} + ${team.id}">
+                <button type="submit" class="btn btn-md btn-danger toggleButton voffset3">Delete</button>
+            </form>
+        </div>
+    </div>
+    <div class="row voffset3">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <form class="toggleButton voffset2" th:action="@{/projects/pokemon_teams/add}" th:object="${addForm}"
+                  method="post">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" th:field="*{teamName}" placeholder="Team Name"/>
+                        <div class="form-group voffset1">
+                                <textarea class="form-control" rows="5" th:field="*{teamData}"
+                                          placeholder="Team Data..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn btn-success" type="submit">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="voffset10"></div>
+</div>
+
+<div th:include="fragments/pageFooter :: noFooter"></div>
+<script>
+    $(document).ready(function () {
+        $(".toggleButton").each(function () {
+            $(this).toggle();
+        });
+
+        $("#editButton").click(function () {
+            $(".toggleButton").each(function () {
+                $(this).toggle();
+            });
+        });
+
+        var $team = $(".team");
+        $team.click(function () {
+            $(this).siblings("div").toggle()
+                    .siblings("hr").toggle();
+        }).mouseover(function () {
+            $(this).toggleClass("text-success");
+        }).mouseout(function () {
+            $(this).toggleClass("text-success");
+        });
+    });
+</script>
+</body>
+</html>

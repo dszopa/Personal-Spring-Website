@@ -1,6 +1,7 @@
 package me.dszopa.website.config;
 
 import me.dszopa.website.controller.*;
+import me.dszopa.website.service.interfaces.PokemonTeamService;
 import me.dszopa.website.service.interfaces.ProgrammingIdeaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +19,8 @@ public class ControllerConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
     private ProgrammingIdeaService ideaService;
+    @Autowired
+    private PokemonTeamService pokemonTeamService;
 
     private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
             "classpath:/META-INF/resources/", "classpath:/resources/",
@@ -64,5 +67,10 @@ public class ControllerConfig extends WebMvcConfigurerAdapter {
     @Bean
     public SplitCalculatorController splitCalculatorController() {
         return new SplitCalculatorController();
+    }
+
+    @Bean
+    public PokemonTeamsController pokemonTeamsController() {
+        return new PokemonTeamsController(pokemonTeamService);
     }
 }

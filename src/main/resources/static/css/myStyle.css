@@ -9,6 +9,10 @@ body {
     width: 100%;
 }
 
+.preserveWhitespace {
+    white-space: pre-wrap;
+}
+
 #homepageBody {
     background-image: url('../img/resizeFinalSummerSea.jpg');
     background-size: 100% 100%;

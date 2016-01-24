@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by danny on 12/28/15.
  */
 @Controller
+@RequestMapping("/projects")
 public class IdeaBoardController {
 
     private ProgrammingIdeaService ideaService;
@@ -34,13 +35,12 @@ public class IdeaBoardController {
         ProgrammingIdea idea = new ProgrammingIdea();
         idea.setIdea(addForm.getIdea());
         ideaService.saveIdea(idea);
-
-        return "redirect:/idea_board";
+        return "redirect:/projects/idea_board";
     }
 
     @RequestMapping(value = "/idea_board/delete/{ideaId}", method = RequestMethod.POST)
     public String deleteIdea(@PathVariable String ideaId) {
         ideaService.deleteIdea(Long.valueOf(ideaId));
-        return "redirect:/idea_board";
+        return "redirect:/projects/idea_board";
     }
 }
