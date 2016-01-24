@@ -45,11 +45,6 @@ public class ControllerConfig extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public CssTestController cssTestController() {
-        return new CssTestController();
-    }
-
-    @Bean
     public IdeaBoardController ideaBoardController() {
         return new IdeaBoardController(ideaService);
     }
@@ -72,5 +67,10 @@ public class ControllerConfig extends WebMvcConfigurerAdapter {
     @Bean
     public PokemonTeamsController pokemonTeamsController() {
         return new PokemonTeamsController(pokemonTeamService);
+    }
+
+    @Bean
+    public TestController testController() {
+        return new TestController();
     }
 }
