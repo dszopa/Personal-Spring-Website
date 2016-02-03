@@ -1,8 +1,8 @@
 package me.dszopa.website;
 
-import me.dszopa.website.config.ControllerConfig;
-import me.dszopa.website.config.RepoConfig;
-import me.dszopa.website.config.ServiceConfig;
+//import me.dszopa.website.config.ControllerConfig;
+//import me.dszopa.website.config.RepoConfig;
+//import me.dszopa.website.config.ServiceConfig;
 import me.dszopa.website.config.WebSecurityConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,9 @@ public class Application {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-        SpringApplication.run(new Object[] {Application.class, RepoConfig.class, ServiceConfig.class,
-                ControllerConfig.class, WebSecurityConfig.class}, args);
+//        SpringApplication.run(new Object[] {Application.class, RepoConfig.class, ServiceConfig.class,
+//                ControllerConfig.class, WebSecurityConfig.class}, args);
+
+        SpringApplication.run(new Object[] {Application.class, WebSecurityConfig.class}, args);
     }
 }

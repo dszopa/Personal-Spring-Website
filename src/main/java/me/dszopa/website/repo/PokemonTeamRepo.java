@@ -3,11 +3,13 @@ package me.dszopa.website.repo;
 import me.dszopa.website.entity.PokemonTeam;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by dszopa on 1/15/16.
  */
+@Repository
 @Transactional
 public interface PokemonTeamRepo extends JpaRepository<PokemonTeam, Long> {
 

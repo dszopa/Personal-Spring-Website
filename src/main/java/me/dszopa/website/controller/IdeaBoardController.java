@@ -3,6 +3,7 @@ package me.dszopa.website.controller;
 import me.dszopa.website.controller.form.IdeaBoardAddForm;
 import me.dszopa.website.entity.ProgrammingIdea;
 import me.dszopa.website.service.interfaces.ProgrammingIdeaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,11 +18,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/projects")
 public class IdeaBoardController {
 
+    @Autowired
     private ProgrammingIdeaService ideaService;
-
-    public IdeaBoardController(ProgrammingIdeaService ideaService) {
-        this.ideaService = ideaService;
-    }
 
     @RequestMapping(value = "/idea_board", method = RequestMethod.GET)
     public String view(Model model) {

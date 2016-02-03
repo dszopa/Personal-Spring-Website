@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/header :: header" th:with="title=${'Pokemon Logger'}">
+</head>
+<body>
+<div th:include="fragments/pageHeader :: pageHeader"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>Pokemon Logs</h1>
+        </div>
+        <div class="col-xs-1">
+            <button id="editButton" type="button" class="btn btn-md btn-primary voffset4">Edit</button>
+        </div>
+        <div class="col-xs-1">
+            <label class="forButton" for="deleteButton">
+                <a class="btn btn-danger btn-md toggleButton voffset4">
+                    Delete Selected
+                </a>
+            </label>
+        </div>
+    </div>
+
+    <div class="row voffset4">
+        <div class="col-xs-12">
+            <div class="well well-sm">
+                <table class="table table-striped table-hover" style="margin-bottom: 0;">
+                    <thead>
+                    <tr class="info">
+                        <td><!-- Checkbox Row --></td>
+                        <td><b>Team Used</b></td>
+                        <td><b>Opponent Starters</b></td>
+                        <td><b>Opponent Others</b></td>
+                        <td><b>My Starters</b></td>
+                        <td><b>My Others</b></td>
+                        <td><b>Result</b></td>
+                    </tr>
+                    </thead>
+                    <form method="post" th:action="@{/projects/pokemon_log/delete/}" th:object="${deleteForm}">
+                        <div th:each="log : ${allLogs}" class="row">
+                            <tbody>
+                                <tr class="active">
+                                    <td>
+                                        <input type="checkbox" th:field="*{logIds}" th:value="${log.id}"/>
+                                    </td>
+                                    <td th:text="${log.teamUsed}"></td>
+                                    <td th:text="${log.opponentStarters}"></td>
+                                    <td th:text="${log.opponentOthers}"></td>
+                                    <td th:text="${log.myStarters}"></td>
+                                    <td th:text="${log.myOthers}"></td>
+                                    <td th:text="${log.result}"></td>
+                                </tr>
+                            </tbody>
+                        </div>
+                        <button type="submit" id="deleteButton" name="delete" class="hidden"></button>
+                    </form>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row toggleButton">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <button id="addButton" type="button" class="btn btn-md btn-primary voffset4">Add</button>
+        </div>
+    </div>
+    <div class="row voffset3 addForm">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <div class="row">
+                <div class="col-xs-10">
+                    <div class="well bs-component toggleButton voffset2">
+                        <fieldset>
+                            <legend>Log Form</legend>
+                            <form class="form-horizontal" th:action="@{/projects/pokemon_log/add}" th:object="${addForm}" method="post">
+                                <div class="form-group">
+                                    <label for="teamused" class="col-xs-2 control-label">Team Used</label>
+                                    <div class="col-xs-8">
+                                        <input class="form-control" th:field="*{teamUsed}" id="teamUsed" placeholder="Team Name" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="opponentStarters" class="col-xs-2 control-label">Opponent Starters</label>
+                                    <div class="col-xs-8">
+                                        <input class="form-control" th:field="*{opponentStarters}" id="opponentStarters" placeholder="Ex: Squirtle + Pidgey" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="opponentOthers" class="col-xs-2 control-label">Opponent Others</label>
+                                    <div class="col-xs-8">
+                                        <input class="form-control" th:field="*{opponentOthers}" id="opponentOthers" placeholder="Ex: Beedril + Machamp" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="myStarters" class="col-xs-2 control-label">My Starters</label>
+                                    <div class="col-xs-8">
+                                        <input class="form-control" th:field="*{myStarters}" id="myStarters" placeholder="Ex: Bulbasaur + Rilou" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="myOthers" class="col-xs-2 control-label">My Others</label>
+                                    <div class="col-xs-8">
+                                        <input class="form-control" th:field="*{myOthers}" id="myOthers" placeholder="Ex: Zapdos + Moltres" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result" class="col-xs-2 control-label">Result</label>
+                                    <div class="col-xs-8">
+                                        <select class="form-control" th:field="*{result}" id="result">
+                                            <option value="Win">Win</option>
+                                            <option value="Lose">Lose</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-5"></div>
+                                    <h3 class="col-xs-2 text-info">Or</h3>
+                                </div>
+                                <div class="form-group">
+                                    <label for="battleURL" class="col-xs-2 control-label">Battle URL</label>
+                                    <div class="col-xs-8">
+                                        <input class="form-control" th:field="*{url}" id="battleURL" placeholder="Ex: play.pokemonshowdown.com/battle-{battle-type}-{number}" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-8 col-lg-offset-2">
+                                        <button id="cancelButton" type="button" class="btn btn-default">Cancel</button>
+                                        <button type="submit" class="btn btn-primary" name="add">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="voffset10">
+        <!-- Spacer for the add form -->
+    </div>
+</div>
+
+<div th:include="fragments/pageFooter :: noFooter"></div>
+<script>
+    $(document).ready(function () {
+        var $toggleButton = $(".toggleButton");
+        var $addButton = $("#addButton");
+        var $addForm = $(".addForm");
+
+        $toggleButton.each(function () {
+            $(this).toggle();
+        });
+
+        $("#editButton").click(function () {
+            $toggleButton.each(function () {
+                $(this).toggle();
+                $addButton.show();
+                $addForm.hide();
+            });
+        });
+        $addButton.click(function () {
+            $addForm.show();
+            $addButton.hide();
+        });
+        $("#cancelButton").click(function () {
+            $addButton.show();
+            $addForm.hide();
+        });
+
+        $("#deleteButton").click(function () {
+            $("input:checkbox[name=type]:checked").each(function(){
+                console.log("One");
+            });
+        });
+    });
+</script>
+</body>
+</html>

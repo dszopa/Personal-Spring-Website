@@ -26,7 +26,6 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
     // Default Compile
     compile('org.springframework.boot:spring-boot-devtools')
@@ -34,6 +33,9 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('mysql:mysql-connector-java:5.1.31')
+    compile('org.jsoup:jsoup:1.8.3')
+    compile('com.google.guava:guava:19.0')
+    compile('javax.mail:mail:1.4.7')
 
     // Webjars
     compile('org.webjars:jquery:3.0.0-alpha1')
@@ -45,7 +47,6 @@ dependencies {
     // Test Compile
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
-
 
 eclipse {
     classpath {

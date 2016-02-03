@@ -3,6 +3,8 @@ package me.dszopa.website.service;
 import me.dszopa.website.entity.ProgrammingIdea;
 import me.dszopa.website.repo.ProgrammingIdeaRepo;
 import me.dszopa.website.service.interfaces.ProgrammingIdeaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,14 +13,16 @@ import java.util.List;
 /**
  * Created by danny on 1/3/16.
  */
+@Service
 @Transactional(propagation = Propagation.SUPPORTS)
 public class ProgrammingIdeaServiceImpl implements ProgrammingIdeaService {
 
+    @Autowired
     private ProgrammingIdeaRepo ideaRepo;
 
-    public ProgrammingIdeaServiceImpl(ProgrammingIdeaRepo ideaRepo) {
-        this.ideaRepo = ideaRepo;
-    }
+//    public ProgrammingIdeaServiceImpl(ProgrammingIdeaRepo ideaRepo) {
+//        this.ideaRepo = ideaRepo;
+//    }
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override

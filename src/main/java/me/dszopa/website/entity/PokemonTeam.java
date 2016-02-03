@@ -18,7 +18,7 @@ public class PokemonTeam {
     private String teamName;
 
     @NotNull
-    @Column(length = 10000)
+    @Column(length = 20000)
     private String teamData;
 
     public PokemonTeam() {}

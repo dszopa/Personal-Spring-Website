@@ -3,6 +3,8 @@ package me.dszopa.website.controller;
 import me.dszopa.website.controller.form.PokemonTeamAddForm;
 import me.dszopa.website.entity.PokemonTeam;
 import me.dszopa.website.service.interfaces.PokemonTeamService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,14 +14,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Created by dszopa on 1/12/16.
  */
+@Controller
 @RequestMapping("/projects")
 public class PokemonTeamsController {
 
+    @Autowired
     private PokemonTeamService pokemonTeamService;
-
-    public PokemonTeamsController(PokemonTeamService pokemonTeamService) {
-        this.pokemonTeamService = pokemonTeamService;
-    }
 
     @RequestMapping(value = "/pokemon_teams", method = RequestMethod.GET)
     public String view(Model model) {

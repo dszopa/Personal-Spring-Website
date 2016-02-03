@@ -19,6 +19,13 @@ body {
     background-repeat: no-repeat;
 }
 
+.forButton {
+    display: inline-block;
+    max-width: 100%;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 /* Vertical Offsets */
 .voffset {
     margin-top: 2px
