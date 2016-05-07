@@ -3,7 +3,7 @@ package me.dszopa.website;
 //import me.dszopa.website.config.ControllerConfig;
 //import me.dszopa.website.config.RepoConfig;
 //import me.dszopa.website.config.ServiceConfig;
-import me.dszopa.website.config.WebSecurityConfig;
+//import me.dszopa.website.config.WebSecurityConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -23,6 +23,8 @@ public class Application {
 //        SpringApplication.run(new Object[] {Application.class, RepoConfig.class, ServiceConfig.class,
 //                ControllerConfig.class, WebSecurityConfig.class}, args);
 
-        SpringApplication.run(new Object[] {Application.class, WebSecurityConfig.class}, args);
+        SpringApplication.run(new Object[] {Application.class}, args);
+
+//        SpringApplication.run(new Object[] {Application.class, WebSecurityConfig.class}, args);
     }
 }
