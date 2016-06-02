@@ -1,73 +1,62 @@
 <div xmlns:th="http://www.thymeleaf.org">
-    <div th:fragment="stickyFooter">
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-5">
-                        <p class="navbar-text"><a href="https://bitbucket.org/dszopa/" class="navbar-link"><i class="fa fa-bitbucket fa-lg "></i> Bitbucket</a></p>
-                    </div>
-                    <div class="col-xs-5">
-                        <p class="navbar-text"><a href="https://github.com/dszopa" class="navbar-link"><i class="fa fa-github fa-lg"></i> Github</a></p>
-                    </div>
-                    <div class="col-xs-2">
-                        <p class="navbar-text"><a href="mailto:dszopa@iastate.edu" class="navbar-link"><i class="fa fa-envelope fa-lg"></i> Email</a></p>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script type="text/javascript" rel="script" th:src="@{/webjars/jquery/3.0.0-alpha1/jquery.min.js}"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script type="text/javscript" rel="script" th:src="@{/webjars/bootswatch-darkly/3.3.5+4/js/bootstrap.min.js}"></script>
-    </div>
-
+    <!-- Normal Page Footer -->
     <div th:fragment="pageFooter">
-        <nav class="navbar-default">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-5">
-                        <p class="navbar-text"><a href="https://bitbucket.org/dszopa/" class="navbar-link"><i class="fa fa-bitbucket fa-lg "></i> Bitbucket</a></p>
-                    </div>
-                    <div class="col-xs-5">
-                        <p class="navbar-text"><a href="https://github.com/dszopa" class="navbar-link"><i class="fa fa-github fa-lg"></i> Github</a></p>
-                    </div>
-                    <div class="col-xs-2">
-                        <p class="navbar-text"><a href="mailto:dszopa@iastate.edu" class="navbar-link"><i class="fa fa-envelope fa-lg"></i> Email</a></p>
+        <div class="vpoffset4"></div>
+        <footer class="page-footer">
+            <nav class="navbar-default">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a href="https://bitbucket.org/dszopa/" class="navbar-link"><i class="fa fa-bitbucket fa-lg "></i> Bitbucket</a></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a href="https://github.com/dszopa" class="navbar-link"><i class="fa fa-github fa-lg"></i> Github</a></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a th:href="@{/projects/}" class="navbar-link"><i class="fa fa-file-text fa-lg"></i> Projects</a></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a href="mailto:dszopa@iastate.edu" class="navbar-link"><i class="fa fa-envelope fa-lg"></i> Email</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-
+            </nav>
+        </footer>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script type="text/javascript" rel="script" th:src="@{/webjars/jquery/3.0.0-alpha1/jquery.min.js}"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javscript" rel="script" th:src="@{/webjars/bootswatch-darkly/3.3.5+4/js/bootstrap.min.js}"></script>
     </div>
 
+    <!-- Homepage Footer -->
     <div th:fragment="homepageFooter">
-        <nav class="navbar navbar-default navbar-fixed-bottom" style="background:rgba(0,0,0,0.7);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-5">
-                        <p class="navbar-text"><a href="https://bitbucket.org/dszopa/" class="navbar-link"><i class="fa fa-bitbucket fa-lg "></i> Bitbucket</a></p>
-                    </div>
-                    <div class="col-xs-5">
-                        <p class="navbar-text"><a href="https://github.com/dszopa" class="navbar-link"><i class="fa fa-github fa-lg"></i> Github</a></p>
-                    </div>
-                    <div class="col-xs-2">
-                        <p class="navbar-text"><a href="mailto:dszopa@iastate.edu" class="navbar-link"><i class="fa fa-envelope fa-lg"></i> Email</a></p>
+        <footer class="page-footer">
+            <nav class="navbar-default" style="background:rgba(0,0,0,0.7);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a href="https://bitbucket.org/dszopa/" class="navbar-link"><i class="fa fa-bitbucket fa-lg "></i> Bitbucket</a></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a href="https://github.com/dszopa" class="navbar-link"><i class="fa fa-github fa-lg"></i> Github</a></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a th:href="@{/projects/}" class="navbar-link"><i class="fa fa-file-text fa-lg"></i> Projects</a></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="navbar-text"><a href="mailto:dszopa@iastate.edu" class="navbar-link"><i class="fa fa-envelope fa-lg"></i> Email</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-
+            </nav>
+        </footer>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script type="text/javascript" rel="script" th:src="@{/webjars/jquery/3.0.0-alpha1/jquery.min.js}"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javscript" rel="script" th:src="@{/webjars/bootswatch-darkly/3.3.5+4/js/bootstrap.min.js}"></script>
     </div>
 
+    <!-- No Footer -->
     <div th:fragment="noFooter">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script type="text/javascript" rel="script" th:src="@{/webjars/jquery/3.0.0-alpha1/jquery.min.js}"></script>

@@ -1,12 +1,21 @@
 html {
-    min-height: 700px;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    position: relative;
 }
 
 body {
-    height: 100%;
+    margin: 0 0 60px;
+}
+
+.page-footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: 60px;
+}
+
+.jumbotron-heading h1 {
+    color: #f39c12;
 }
 
 .preserveWhitespace {
@@ -77,4 +86,84 @@ body {
 
 .voffset12 {
     margin-top: 300px
+}
+
+.vmoffset1 {
+    margin-top: 1%;
+}
+
+.vmoffset2 {
+    margin-top: 2%;
+}
+
+.vmoffset3 {
+    margin-top: 3%;
+}
+
+.vmoffset4 {
+    margin-top: 5%;
+}
+
+.vmoffset5 {
+    margin-top: 10%;
+}
+
+.vmoffset6 {
+    margin-top: 15%;
+}
+
+.vmoffset7 {
+    margin-top: 20%;
+}
+
+.vmoffset8 {
+    margin-top: 25%;
+}
+
+.vmoffset9 {
+    margin-top: 35%;
+}
+
+.vmoffset10 {
+    margin-top: 50%;
+}
+
+.vpoffset1 {
+    padding-top: 1%;
+}
+
+.vpoffset2 {
+    padding-top: 2%;
+}
+
+.vpoffset3 {
+    padding-top: 3%;
+}
+
+.vpoffset4 {
+    padding-top: 5%;
+}
+
+.vpoffset5 {
+    padding-top: 10%;
+}
+
+.vpoffset6 {
+    padding-top: 15%;
+}
+
+.vpoffset7 {
+    padding-top: 20%;
+}
+
+.vpoffset8 {
+    padding-top: 25%;
+}
+
+.vpoffset9 {
+    padding-top: 35%;
+}
+
+.vpoffset10 {
+    padding-top: 50%;
 }

@@ -7,15 +7,18 @@
 
 <div class="container">
     <div class="row">
-        <h1>List of projects:</h1>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-11">
+            <h1>List of projects:</h1>
+        </div>
     </div>
     <div class="row">
-        <div class="col-xs-1"></div>
-        <div class="col-xs-6">
-            <h3><a th:href="@{projects/split_calculator}">Tournament Split Calculator</a></h3>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-10">
+            <h3><a th:href="@{/projects/split_calculator}">Tournament Split Calculator</a></h3>
             <div class="row">
                 <div class="col-xs-1"></div>
-                <div class="col-xs-9">
+                <div class="col-xs-11">
                     <li>A simple calculator used to determine tournament winnings.</li>
                     <li>Made with JQuery.</li>
                 </div>
@@ -23,12 +26,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1"></div>
-        <div class="col-xs-6">
-            <h3><a th:href="@{projects/idea_board}">Idea Board</a></h3>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-10">
+            <h3><a th:href="@{/projects/idea_board}">Idea Board</a></h3>
             <div class="row">
                 <div class="col-xs-1"></div>
-                <div class="col-xs-9">
+                <div class="col-xs-11">
                     <li>An online board of my current programming ideas.</li>
                     <li>Communicates with a MySQL database.</li>
                 </div>
@@ -36,32 +39,30 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1"></div>
-        <div class="col-xs-6">
-            <h3><a th:href="@{projects/pokemon_teams}">Pokemon Teams Board</a></h3>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-10">
+            <h3><a th:href="@{/projects/pokemon_teams}">Pokemon Teams Board</a></h3>
             <div class="row">
                 <div class="col-xs-1"></div>
-                <div class="col-xs-9">
+                <div class="col-xs-11">
                     <li>An online board to backup pokemon teams.</li>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1"></div>
-        <div class="col-xs-6">
-            <h3><a th:href="@{projects/pokemon_log}">Pokemon Battle Logger</a></h3>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-10">
+            <h3><a th:href="@{/projects/pokemon_log}">Pokemon Battle Logger</a></h3>
             <div class="row">
                 <div class="col-xs-1"></div>
-                <div class="col-xs-9">
+                <div class="col-xs-11">
                     <li>An online Logger for VGC pokemon battles.</li>
-                    <li>Hopefully will use JSoup for webscraping so that you only need the URL.</li>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<div th:include="fragments/pageFooter :: stickyFooter"></div>
+<div th:include="fragments/pageFooter :: pageFooter"></div>
 </body>
 </html>
