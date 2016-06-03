@@ -1,0 +1,30 @@
+/*Custom Colors*/
+.text-white {
+    color: azure; !important;
+}
+
+a.text-white:hover,
+a.text-white:focus {
+    color: azure; !important;
+}
+
+.text-orange {
+    color: #f39c12;
+}
+
+a.text-orange:hover,
+a.text-orange:focus {
+    color: #f39c12;
+}
+
+.text-warning {
+    color: #f39c12; !important;
+}
+a.text-warning:hover,
+a.text-warning:focus {
+    color: #f39c12; !important;
+}
+
+body {
+    /*background-color: #67655D;*/
+}
