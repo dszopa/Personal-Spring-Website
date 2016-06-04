@@ -7,6 +7,14 @@ body {
     margin: 0 0 60px;
 }
 
+.transparentBg {
+    background:rgba(0,0,0,0);
+}
+
+.transparentBlackBg {
+    background:rgba(0,0,0,0.7);
+}
+
 .page-footer {
     position: absolute;
     bottom: 0;
