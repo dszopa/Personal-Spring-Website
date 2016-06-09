@@ -5,14 +5,18 @@
 <body>
 <div th:include="fragments/pageHeader :: pageHeader"></div>
 
-<div class="container">
+<div class="container vmoffset3">
     <div class="row">
-        <h2 class="text-success">Tournament Split Calculator</h2>
-        <form id="calculateForm" action="" class="voffset4">
+        <div class="col-xs-12">
+            <h2>Tournament Split Calculator</h2>
+        </div>
+    </div>
+    <div class="row">
+        <form id="calculateForm" class="voffset4">
             <div class="col-xs-6">
                 <div class="input-group">
               <span class="input-group-btn">
-                <button class="btn btn-default">Calculate</button>
+                <button class="btn btn-primary">Calculate</button>
               </span>
                     <input id="entrants" type="text" class="form-control" placeholder="How many entrants?"/>
                 </div>
@@ -28,7 +32,9 @@
         </form>
     </div>
     <div class="row" style="padding-top: 20px;">
-        <ul id="list" style="list-style: none; padding-left: 20px;"></ul>
+        <div class="col-xs-12">
+            <ul id="list" style="list-style: none;"></ul>
+        </div>
     </div>
 </div>
 
@@ -46,7 +52,7 @@
         else if(entrants >= 0 && entrants < 25) {
             $("#list").empty()
                     .append("<li>Total: $" + total +"</li>")
-                    .append("<hr></hr>")
+                    .append("<hr/>")
                     .append("<li>1st Place: $" + Math.floor(total*0.6)+"</li>")
                     .append("<li>2nd Place: $" + Math.floor(total*0.3)+"</li>")
                     .append("<li>3rd Place: $" + Math.floor(total*0.1)+"</li>");
@@ -54,7 +60,7 @@
         else if(entrants >= 25 && entrants < 45) {
             $("#list").empty()
                     .append("<li>Total: $" + total +"</li>")
-                    .append("<hr></hr>")
+                    .append("<hr/>")
                     .append("<li>1st Place: $" + Math.floor(total*0.5)+"</li>")
                     .append("<li>2nd Place: $" + Math.floor(total*0.25)+"</li>")
                     .append("<li>3rd Place: $" + Math.floor(total*0.15)+"</li>")
@@ -63,7 +69,7 @@
         else if(entrants >= 45 && entrants < 60) {
             $("#list").empty()
                     .append("<li>Total: $" + total +"</li>")
-                    .append("<hr></hr>")
+                    .append("<hr/>")
                     .append("<li>1st Place: $" + Math.floor(total*0.4)+"</li>")
                     .append("<li>2nd Place: $" + Math.floor(total*0.25)+"</li>")
                     .append("<li>4th Place: $" + Math.floor(total*0.1)+"</li>")
@@ -73,7 +79,7 @@
         else {//entrants >= 60
             $("#list").empty()
                     .append("<li>Total: $" + total +"</li>")
-                    .append("<hr></hr>")
+                    .append("<hr/>")
                     .append("<li>1st Place: $" + Math.floor(total*0.4)+"</li>")
                     .append("<li>2nd Place: $" + Math.floor(total*0.25)+"</li>")
                     .append("<li>3rd Place: $" + Math.floor(total*0.15)+"</li>")

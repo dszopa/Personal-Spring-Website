@@ -1,4 +1,4 @@
-/*Custom Colors*/
+/*Text Colors*/
 .text-white {
     color: azure; !important;
 }
@@ -25,6 +25,34 @@ a.text-warning:focus {
     color: #f39c12; !important;
 }
 
+.text-cyan {
+    color: #0ce3ac;
+}
+
+a.text-cyan:hover,
+a.text-cyan:focus {
+    color: #0ce3ac;
+}
+
+
+/*Background Colors*/
+.bg-blue {
+    background-color: #375A7F;
+    color: #FFFFFD;
+}
+
+.bg-dark {
+    background-color: #222222;
+    color: #FFFFFD;
+}
+
+
+/*Overall Color/Style Changes*/
 body {
-    /*background-color: #67655D;*/
+    background-color: #222222;
+    color: #FFFFFD;;
+}
+
+hr {
+    border-top: 1px solid rgba(255,255,255,.1);
 }
